@@ -1,0 +1,64 @@
+@font-face {
+      font-family: 'Pixelify';
+      src: url('./assets/pixelify_sans/PixelifySans.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+h1 {
+  font-family: 'Pixelify', monospace;
+
+  font-size: xxx-large;
+  
+}
+
+#headerId{
+  padding-top:10px;
+  font-family: 'Pixelify', monospace;
+  
+  display: flex;
+  flex-direction: column;
+  gap:3px;
+  position: sticky;
+  z-index: 999;
+  top:0;
+}
+
+.headerTag{
+  border:solid;
+  border-color: black;
+  border-bottom: none;
+  padding: 5px;
+  border-radius: 4px;
+  margin:2px;
+  color:black;
+}
+
+#tags{
+  padding-left: 80px;
+}
+
+
+
+#main-body{
+  
+  
+  margin-left:50px;
+  margin-right:50px;
+  border: solid;
+  border-color: black;
+  border-radius: 20px;
+  background-color: #E0D8C9;
+}
+
+#home{
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
+
+#text-home{
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+}
