@@ -1,69 +1,82 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <script>try{var t=localStorage.getItem("theme")||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}</script>
     
     <title>Rebecca Mcdonnell</title>
    <link rel="stylesheet" href="/src/style.css" />
 
   </head>
   <body id="body">
-    <nav id="headerId">
+       <div id="page-frame">
+
+    
+    <nav id="headerId" aria-label="Main">
+      <a class="brand" href="#home" aria-label="Back to top">rm<span>_</span></a>
       <div id="tags">
-        <a class="headerTag" class="active"  style="text-decoration:none" href="#home">Home</a>
-        <a class="headerTag" href="#projects"  style="text-decoration:none">Projects</a>
-        <a class="headerTag" href="#skills"  style="text-decoration:none">Skills</a>
-        <a class="headerTag" href="#about"  style="text-decoration:none">About</a>
+        <span id="nav-indicator" aria-hidden="true"></span>
+        <a class="headerTag" href="#home">Home</a>
+        <a class="headerTag" href="#projects">Projects</a>
+        <a class="headerTag" href="#skills">Skills</a>
+        <a class="headerTag" href="#about">About</a>
+        <a class="headerTag" href="#contact-me">Contact</a>
       </div>
-      <div id="header-lines"></div>
+      <button id="theme-toggle" type="button" aria-label="Switch to dark mode">
+        <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
     </nav>
+    
     <main id="main-body">
-      <div id="home" >
-        <div id="text-home">
-            <h1 id="title">|</h1>
-          <h2 id="titleName">> Rebecca Mcdonnell</h2>
-          <p id="titlePhrase">Sofwate Egnineer Student that loves cats and new ideas!</p>
-          <div id="socials-icons-home">
-            <a  href="https://github.com/scar-xw" class="links">
-              <img id="git" class="separator" src="src/assets/github-icon.png" height="50" width="56">
-            </a>
+<div id="page-content">
+        <div id="home" >
+          <div id="text-home">
+              <h1 id="title"></h1>
+              <h2 id="titleName">> Rebecca Mcdonnell</h2>
+              <p id="titlePhrase">Software Engineering student that loves cats and new ideas!</p>
+              <div id="socials-icons-home">
+                <a  href="https://github.com/scar-xw" class="links">
+                <img id="git" class="separator elevated hover-pop" src="src/assets/github-icon.png" height="50" width="56">
+                </a>
             
-            <a  href="https://www.linkedin.com/in/rebecca-mcdonnell-a55833248/" class="links">
-            <img id="linkedin" class="separator" src="src/assets/linkedin-icon.png" height="50" width="52">
-            </a>
-            <button class="separator" id="contactMeButton">Contact Me</button>
+                <a  href="https://www.linkedin.com/in/rebecca-mcdonnell-a55833248/" class="links">
+                <img id="linkedin" class="separator elevated hover-pop" src="src/assets/linkedin-icon.png" height="50" width="52">
+                </a>
+                <button class="separator" id="contactMeButton">Contact Me</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div id="projects">
-        <h1  class="leftTitle">Projects</h1>
-        <div id="project-carrosel">
+        <div id="projects">
+          <h1  class="leftTitle">Projects</h1>
+          <div id="project-carrosel">
           
-          <div class="projectCards" id="project1">
-            <div class="projectDetails">
-              <h3 class="projectTitle">PANDA-DORO TIMER</h3>
-              <img class="projectPhoto" src="src/assets/project1-photo.png" width="240" height="130">
-              <p>Small cute desktop app to pomodoro time your studies, 
-                with a little buddy panda to warn you and play some lofi 
-                while you concentrate!</p>
+            <div class="projectCards" id="project1">
+              <div class="projectDetails">
+                <h3 class="projectTitle">PANDA-DORO TIMER</h3>
+                <img class="projectPhoto" src="src/assets/project1-photo.png" width="240" height="130">
+                <p>Small cute desktop app to pomodoro time your studies, 
+                  with a little buddy panda to warn you and play some lofi 
+                  while you concentrate!</p>
+              </div>
+              <a class="links" href="https://github.com/scar-xw/Pomodoro-timer">
+              <div class="gitButton">
+
+                <img src="src/assets/github-icon.png" height="27" width="30">
+                Check it out
+              </div></a>
             </div>
-            <a class="links" href="https://github.com/scar-xw/Pomodoro-timer">
-            <div class="gitButton">
-
-              <img src="src/assets/github-icon.png" height="27" width="30">
-              Check it out
-            </div></a>
-          </div>
 
           <div class="projectCards" id="project1">
             <div class="projectDetails">
-              <h3 class="projectTitle">PANDA-DORO TIMER</h3>
-              <img class="projectPhoto" src="src/assets/project1-photo.png" width="240" height="130">
-              <p>Small cute desktop app to pomodoro time your studies, 
-                with a little buddy panda to warn you and play some lofi 
-                while you concentrate!</p>
+              <h3 class="projectTitle">LIBRARY SYSTEM</h3>
+              <img class="projectPhoto" src="src/assets/project2-photo.png" width="240" height="130">
+              <p>Library Management System with dynamic memory allocation 
+                and structured data types. Users can add books, list titles, 
+                and register loans, with an interactive terminal menu!</p>
             </div>
             <div class="gitButton">
               <img src="src/assets/github-icon.png" height="27" width="30">
@@ -73,11 +86,10 @@
 
                     <div class="projectCards" id="project1">
             <div class="projectDetails">
-              <h3 class="projectTitle">PANDA-DORO TIMER</h3>
-              <img class="projectPhoto" src="src/assets/project1-photo.png" width="240" height="130">
-              <p>Small cute desktop app to pomodoro time your studies, 
-                with a little buddy panda to warn you and play some lofi 
-                while you concentrate!</p>
+              <h3 class="projectTitle">PORTFOLIO</h3>
+              <img class="projectPhoto" src="src/assets/project3-photo.png" width="240" height="130">
+              <p>This is my portfolio which you are looking at now! Made with 
+                JavaScript, NodeJS, CSS and HTML. Check the code out!</p>
             </div>
             <div class="gitButton">
               <img src="src/assets/github-icon.png" height="27" width="30">
@@ -87,11 +99,9 @@
 
                     <div class="projectCards" id="project1">
             <div class="projectDetails">
-              <h3 class="projectTitle">PANDA-DORO TIMER</h3>
-              <img class="projectPhoto" src="src/assets/project1-photo.png" width="240" height="130">
-              <p>Small cute desktop app to pomodoro time your studies, 
-                with a little buddy panda to warn you and play some lofi 
-                while you concentrate!</p>
+              <h3 class="projectTitle">POWER BI DASHBOARD</h3>
+              <img class="projectPhoto" src="src/assets/project4-photo.png" width="240" height="130">
+              <p> NDR dashboard with data cleaning and analysis, created with python and Language M in Power Query</p>
             </div>
             <div class="gitButton">
               <img src="src/assets/github-icon.png" height="27" width="30">
@@ -129,14 +139,16 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" height="50" width="50"/>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"  height="50" width="50"/>
 
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="50" width="50"/>                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"  height="50" width="50"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" height="50" width="50"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" height="50" width="50"/>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg"  height="50" width="50"/>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"  height="50" width="50"/>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" height="50" width="50"/>
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"  height="50" width="50"/>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original.svg"  height="50" width="50"/>
 
               </div>
             </div>
+          </div>
           <div  id="tech-stack1">
             <p>2+ years of experience</p>
             <div class="techStackwrap">
@@ -175,15 +187,187 @@
         </div>
         <div id="contact-form">
           <form>
-            <input type="text" placeholder=" Name *"></input><br>
-            <input type="text" placeholder=" Email *"></input><br>
-            <textarea id="messageArea" name="message" placeholder=" Message *" rows="6"></textarea>
-            <br>
-            <input type="submit" value="Send"></input>
+            <input type="text" name="name" placeholder="Name *" aria-label="Name" autocomplete="name" required>
+            <input type="email" name="email" placeholder="Email *" aria-label="Email" autocomplete="email" required>
+            <textarea id="messageArea" name="message" placeholder="Message *" aria-label="Message" rows="6" required></textarea>
+            <input type="submit" value="Send">
           </form>
         </div>
       </div>
 
+
+    <p id="img1" class="glow-text" aria-hidden="true">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⣿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣈⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⣴⣤⡀⠀⠀⠀⠀⣭⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⢸⡀⠈⠳⣄⠀⠀⠼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⢠⠀⠀⠀⢳⠀⠀⠈⠢⡀⠶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠉⢻⠉⢀⠀⠀⢣⠀⠀⠀⠈⢼⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠺⠃⠀⠀⠡⠀⠀⠀⣸⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠱⡀⠀⣿⡀⢈⡄⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣀⣹⣾⣿⣷⣏⣀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠉⠉⠉⠉⠙⠛⢻⣿⣶⣿⡟⠛⠋⠉⠉⠉⠉⠁⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠞⠹⣿⢏⠳⡄⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⠀⠢⠀⠀⠀⠰⡧⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⡀⢸⠀⠀⠡⡀⠀⠀⠀⠤⣾⠤<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢬⠀⠀⠀⠱⡀⠀⠀⠀⠘⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠑⢄⠀⠀⢣⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠓⢤⣀⡇⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠶⠀⠀⠀⠀⠈⠁⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣛⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢩⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣤⣿⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br></p>
+
+<p id="img2" class="glow-text" aria-hidden="true">⠀⠀⠀⢸⣦⡀⠀⠀⠀⠀⢀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢸⣏⠻⣶⣤⡶⢾⡿⠁⠀⢠⣄⡀⢀⣴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⣀⣼⠷⠀⠀⠁⢀⣿⠃⠀⠀⢀⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠴⣾⣯⣅⣀⠀⠀⠀⠈⢻⣦⡀⠒⠻⠿⣿⡿⠿⠓⠂⠀⠀⢀⡇⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠉⢻⡇⣤⣾⣿⣷⣿⣿⣤⠀⠀⣿⠁⠀⠀⠀⢀⣴⣿⣿⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠸⣿⡿⠏⠀⢀⠀⠀⠿⣶⣤⣤⣤⣄⣀⣴⣿⡿⢻⣿⡆⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠟⠁⠀⢀⣼⠀⠀⠀⠹⣿⣟⠿⠿⠿⡿⠋⠀⠘⣿⣇⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢳⣶⣶⣿⣿⣇⣀⠀⠀⠙⣿⣆⠀⠀⠀⠀⠀⠀⠛⠿⣿⣦⣤⣀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⣹⣿⣿⣿⣿⠿⠋⠁⠀⣹⣿⠳⠀⠀⠀⠀⠀⠀⢀⣠⣽⣿⡿⠟⠃<br>
+⠀⠀⠀⠀⠀⢰⠿⠛⠻⢿⡇⠀⠀⠀⣰⣿⠏⠀⠀⢀⠀⠀⠀⣾⣿⠟⠋⠁⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠀⠀⣰⣿⣿⣾⣿⠿⢿⣷⣀⢀⣿⡇⠁⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠋⠉⠁⠀⠀⠀⠀⠙⢿⣿⣿⠇⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀</p>
+
+<p id="img3" class="glow-text" aria-hidden="true">⠀⠀⠀⡎⢉⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢈⣁⠆⡀⠀⠀⠀⠀⣄⠀⠀<br>
+⠀⠀⠀⢳⢹⠁⠀⠱⡀⠀⠀⢈⠆⠀<br>
+⠀⠀⠀⠠⢾⣆⠀⠞⠁⠀⣠⠮⡤⡀<br>
+⠀⠀⠀⠀⠐⠹⢦⡀⠀⠰⠁⡀⢰⡁<br>
+⠀⠀⠀⢔⠞⠛⠶⣟⣦⣀⠀⠀⠛⠀<br>
+⠀⠀⠀⠌⣤⡴⠀⠀⠀⠉⠳⡰⡡⠄<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠹⡄⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⡇⢄⠙⢀⢷⢁<br>
+⠀⠀⠀⠀⣀⣄⡀⠀⠑⠀⠀⠊⣸⢰<br>
+⠀⠀⠀⡔⠁⠠⠗⠀⠀⠀⠀⠀⡭⠄<br>
+⠀⠀⠀⢣⠀⠀⠲⣄⣀⣀⢤⡾⠁⠀<br>
+⠀⠀⠀⠀⠑⠢⠀⠀⢠⣴⣟⠍⠀⠀<br>
+⠐⠄⠄⠤⢐⡢⣀⡼⡾⠋⠀⠀⠀⠀<br>
+⠀⠀⢀⠔⣡⣞⠏⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠔⢡⠞⠁⡎⠀⠔⠒⡄⠀⠀⠀⠀<br>
+⡎⢰⠃⠀⠀⡗⠄⠁⣀⠆⠀⠀⠀⠀<br>
+⠀⠁⢀⠃⠀⠣⡀⠀⠀⠀⠀⣥⠀⠱<br>
+⠀⠀⡂⢧⡀⠐⢌⣀⠀⠀⢀⡠⢠⢀<br>
+⠀⠀⠂⠀⠁⠀⠀⢐⠩⣏⣋⡸⠗⠊<br>
+⠀⠀⠀⠀⠀⠈⠉⡆⢡⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠑⠤⠔⠁⣸⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠥⠃⠀⠀⠀⠀</p>
+
+<p id="img4" class="glow-text" aria-hidden="true">⠀⠀⠀⡎⢉⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢈⣁⠆⡀⠀⠀⠀⠀⣄⠀⠀<br>
+⠀⠀⠀⢳⢹⠁⠀⠱⡀⠀⠀⢈⠆⠀<br>
+⠀⠀⠀⠠⢾⣆⠀⠞⠁⠀⣠⠮⡤⡀<br>
+⠀⠀⠀⠀⠐⠹⢦⡀⠀⠰⠁⡀⢰⡁<br>
+⠀⠀⠀⢔⠞⠛⠶⣟⣦⣀⠀⠀⠛⠀<br>
+⠀⠀⠀⠌⣤⡴⠀⠀⠀⠉⠳⡰⡡⠄<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⡀⠹⡄⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⡇⢄⠙⢀⢷⢁<br>
+⠀⠀⠀⠀⣀⣄⡀⠀⠑⠀⠀⠊⣸⢰<br>
+⠀⠀⠀⡔⠁⠠⠗⠀⠀⠀⠀⠀⡭⠄<br>
+⠀⠀⠀⢣⠀⠀⠲⣄⣀⣀⢤⡾⠁⠀<br>
+⠀⠀⠀⠀⠑⠢⠀⠀⢠⣴⣟⠍⠀⠀<br>
+⠐⠄⠄⠤⢐⡢⣀⡼⡾⠋⠀⠀⠀⠀<br>
+⠀⠀⢀⠔⣡⣞⠏⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠔⢡⠞⠁⡎⠀⠔⠒⡄⠀⠀⠀⠀<br>
+⡎⢰⠃⠀⠀⡗⠄⠁⣀⠆⠀⠀⠀⠀<br>
+⠀⠁⢀⠃⠀⠣⡀⠀⠀⠀⠀⣥⠀⠱<br>
+⠀⠀⡂⢧⡀⠐⢌⣀⠀⠀⢀⡠⢠⢀<br>
+⠀⠀⠂⠀⠁⠀⠀⢐⠩⣏⣋⡸⠗⠊<br>
+⠀⠀⠀⠀⠀⠈⠉⡆⢡⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠑⠤⠔⠁⣸⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠥⠃⠀⠀⠀⠀</p>
+
+<p id="img5" class="glow-text" aria-hidden="true">⠀⠀⠀⠀⠀⣠⣤⡦⣤⣬⣍⡉⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⣠⠒⠉⠁⠀⠀⠀⠀⠈⠙⠻⣦⣜⠳⣄⢀⣀⣀⣠⣄⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⡜⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⢿⡖⠛⣯⠀⠀⣀⣀⣀⣀⡀⠈⠉⠓⠒⠠⠤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣯⠙⣦⠀<br>
+⣼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠃⣤⣽⣶⠾⣿⠉⠉⠉⠉⠉⠉⠙⠓⢤⡀⠀⠀⠀⠉⠙⠒⠶⢤⣤⣀⡀⠀⠀⠀⠀⠨⠍⢀⡾⠃<br>
+⢿⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⣶⣿⠋⠉⣏⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠣⡀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠛⠓⠲⠖⠚⠉⠀⠀<br>
+⠘⣆⢀⣤⡀⠀⠀⠀⡼⢥⣶⠿⠙⠀⠀⠀⡇⠀⢸⡇⠀⠀⠀⠀⢠⣦⣤⠀⠀⠀⢹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠈⠻⣿⡟⠀⠀⣾⣽⡿⠏⠁⠀⠀⠀⡸⠁⠀⣾⠀⠀⠀⠀⠀⢯⠙⠃⠀⠀⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⣑⣿⡟⠃⠀⠀⠀⠀⡴⠁⠀⣰⠏⠃⠀⠀⠀⠀⠘⢦⣄⣀⣠⡴⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢀⠀⢀⣾⠟⠐⢲⡷⠶⢶⡞⠁⠀⣴⠟⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢰⢿⡿⣾⡏⠀⠀⠀⠁⢰⠏⠀⢀⡾⡉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠸⣌⢠⡿⠄⠀⢀⣠⡶⠁⠀⡰⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠈⣿⡟⠛⠋⢡⠞⠀⣠⠞⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢀⢠⡟⠀⠀⢠⠃⠀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⡎⢸⠇⠀⠀⡏⠀⠀⠀⠀⣴⣗⠲⢤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⢀⡇⣼⠀⠀⢸⡇⠀⠀⠀⠈⠛⠿⠃⠘⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠘⡇⣧⠀⠀⠀⢷⡀⠀⠀⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⡇⢸⠀⠀⠀⠈⠻⢶⣤⣤⣤⠶⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢃⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢸⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠸⡄⠘⣆⠀⠀⣰⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢧⠀⠉⠳⢤⣽⡿⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢀⠸⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠸⡆⢳⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⢸⡘⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⢧⢸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠸⡄⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢇⠘⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⢸⠀⢹⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠸⡄⠀⢷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⣠⡀⠈⡇⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⢸⢿⠇⠀⡇⠀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠸⣄⣀⢰⣧⣴⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠈⠙⢻⣿⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+</p>
+
+<p id="img6" class="glow-text" aria-hidden="true">⠀⠀⢀⡴⠟⠋⠙⠻⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⣰⠏⠀⠀⠀⠀⣀⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⡟⠀⠀⠀⠀⠀⠛⠋⠀⢀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⢸⡇⠀⠀⠀⠀⠀⠀⣠⡾⠋⠉⠉⠙⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⣧⠀⠀⠀⠀⠀⣼⡿⠀⠀⠀⡤⡄⣸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠹⣆⠀⠀⠀⢸⡏⠀⠀⠀⠀⠛⠶⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠙⢦⡀⠀⣾⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠙⠦⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⢻⠙⠶⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠘⣇⠀⠘⡄⠀⠀⠀⠀⠀⡴⠉⠉⠱⡄⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⢹⡄⣰⢷⠀⠀⠀⠀⠀⠣⡶⠀⠀⣿⡀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⢀⣻⣿⠀⢠⠖⡆⠀⠀⠀⠀⠀⣴⣿⠃⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠘⠈⢿⣦⣿⠀⡇⠀⢀⣀⣴⠾⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⣠⠖⠉⠉⠉⠻⢿⣆⡇⠀⣾⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⣼⢁⠀⠀⠀⠀⣤⣿⣽⢾⣆⢿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⢟⠚⠀⣶⠀⠀⠉⢈⣙⠻⣿⣾⣧⡏⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠈⠢⠤⠚⠀⢀⣼⠭⠿⠿⢿⣿⣿⣧⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⣠⠞⠉⡇⠀⠀⠀⠀⢈⡟⢿⣿⡟⣿⣳⠞⢛⣦⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⣼⠁⠀⠀⠙⠀⠀⢠⣿⢻⣯⠾⠮⣿⣿⡟⠓⠀⠀⠀⠰⠲⡄<br>
+⠀⠀⠀⠀⠀⢰⡇⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠈⠃⠙⡿⡄⢀⡤⠶⢄⠀⡗<br>
+⠀⠀⠀⠀⠀⢸⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⣖⡴⠃⢹⣼⠁⠸⠯⢀⡇<br>
+⠀⠀⠀⠀⠀⠸⣧⠀⣴⣦⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⡴⣼⠻⡿⡆⠀⢠⠞⠀<br>
+⠀⠀⠀⠀⠀⠀⠙⢷⣶⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠸⡀⠉⣰⡷⣇⢠⠋⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡞⢹⠀⠀⠉⢹⠳⣇⣼⠃⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣧⠀⠀⠀⢠⠌⠓⣰⢿⠀⣀⡀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠳⣤⣤⣬⡽⠟⠁⣼⠞⢉⡙⡆<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⢦⡴⣿⠀⠻⠵⠃<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⡟⢡⣴⣿⡇⠀⠀⢀⣤⡀⠠⡖⣰⣿⠄⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣧⠀⠉⠉⠀⠀⢠⠋⠦⠇⠀⣩⣿⢹⡄⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⣷⣄⡀⠀⠀⠸⠀⣀⣤⠾⢃⡇⢸⠹⠴⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⣒⡘⠛⢿⣟⠛⠛⢟⠉⠁⢀⡞⠀⡟⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣰⠟⠋⢻⣿⡆⠀⢫⢳⡀⠈⠒⠚⠉⠀⣸⡇⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⣏⡤⢰⣾⡿⠃⠀⠀⡆⢇⠀⠀⠀⠀⡴⢣⠃⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⢀⢠⡏⠀⠀⠉⠀⠀⠀⣠⠁⠘⠀⠀⠀⠀⠀⡼⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⢨⢸⡸⡀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⢀⡼⠁⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠈⡆⡇⠉⠒⠸⠃⠀⠀⠚⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠘⣧⠞⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⢀⣟⡆⠀⢠⠔⠒⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠘⢹⣿⡴⠃⠀⠀⠀⠀⠀⠀⣤⣦⣄⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⣀⢀⡟⡞⢿⣄⠀⠀⣀⠀⠀⠸⣿⠀⢻⡇⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠘⠯⠚⠀⠹⢎⢻⣿⠶⠟⠀⠀⠀⠀⣠⣿⠃⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣶⣄⣠⣴⠾⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⡦⡀⠀⠀⠀⠀⠀⠀⢀⡀⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠷⢢⣤⡄⠀⣀⣨⠟⠀⠀⠀⠀<br>
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀</p>
+
+</div>
     </main>
     <footer >
       <div id="footer">
@@ -205,7 +389,7 @@
         <h5>© 2026 Rebecca McDonnell. All rights reserved.</h5>
       </div>
     </footer>
-
+  </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
